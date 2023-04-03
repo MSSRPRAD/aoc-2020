@@ -3,4 +3,4 @@
 ## Solutions in Rust
 
 ### NOTE:
-Honestly my solutions as of aren't good and are definitely not the 'Rust Way'. Someday I will fix this.
+Honestly my solutions as of now aren't good and are definitely not the 'Rust Way'. Someday I will fix this.
