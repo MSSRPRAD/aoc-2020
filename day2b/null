@@ -1,0 +1,24 @@
+   Compiling day2b v0.1.0 (/home/malladipradyumna/Desktop/Rust Practice/aoc-2020/day2b)
+warning: unused variable: `c`
+  --> src/main.rs:23:13
+   |
+23 |         let c = c.unwrap();
+   |             ^ help: if this is intentional, prefix it with an underscore: `_c`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: variable does not need to be mutable
+  --> src/main.rs:18:9
+   |
+18 |     let mut count: usize = 0;
+   |         ----^^^^^
+   |         |
+   |         help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` on by default
+
+warning: `day2b` (bin "day2b") generated 2 warnings
+    Finished dev [unoptimized + debuginfo] target(s) in 0.88s
+     Running `target/debug/day2b`
+thread 'main' panicked at 'called `Option::unwrap()` on a `None` value', src/main.rs:25:79
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
