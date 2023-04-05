@@ -1,6 +1,7 @@
 use std::fs::File;
-use std::io::{ self, BufRead, BufReader };
-#[macro_use] extern crate scan_fmt;
+use std::io::{self, BufRead, BufReader};
+#[macro_use]
+extern crate scan_fmt;
 
 fn read_lines(filename: String) -> io::Lines<BufReader<File>> {
     let file = File::open(filename).unwrap();
@@ -18,15 +19,16 @@ fn main() {
     for i in 0..vec.len() {
         let (a, b, c, d) = scan_fmt_some!(&vec[i], "{d}-{d} {}: {}", usize, usize, String, String);
         let mut freq = 0;
-        for j in 0..d.clone().unwrap().len(){
-           if d.clone().unwrap().chars().nth(j).unwrap() == c.clone().unwrap().chars().nth(0).unwrap() {
-            freq +=1;
-           }
+        for j in 0..d.clone().unwrap().len() {
+            if d.clone().unwrap().chars().nth(j).unwrap()
+                == c.clone().unwrap().chars().nth(0).unwrap()
+            {
+                freq += 1;
+            }
         }
         if freq >= a.unwrap() as usize && freq <= b.unwrap() as usize {
-            count +=1;
+            count += 1;
         }
     }
     println!("{:?}", count);
-
 }

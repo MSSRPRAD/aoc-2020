@@ -22,9 +22,12 @@ fn main() {
         let b = b.unwrap() as usize;
         let c = c.unwrap();
         let d = d.unwrap();
-        if d.clone().chars().nth(a-1).unwrap() == c.clone().chars().nth(0).unwrap() && d.clone().chars().nth(b-1).unwrap() != c.clone().chars().nth(0).unwrap() || 
-           d.clone().chars().nth(a-1).unwrap() != c.clone().chars().nth(0).unwrap() && d.clone().chars().nth(b-1).unwrap() == c.clone().chars().nth(0).unwrap()  {
-            count+=1;
+        if d.clone().chars().nth(a - 1).unwrap() == c.clone().chars().nth(0).unwrap()
+            && d.clone().chars().nth(b - 1).unwrap() != c.clone().chars().nth(0).unwrap()
+            || d.clone().chars().nth(a - 1).unwrap() != c.clone().chars().nth(0).unwrap()
+                && d.clone().chars().nth(b - 1).unwrap() == c.clone().chars().nth(0).unwrap()
+        {
+            count += 1;
         }
     }
     println!("{:?}", count);
